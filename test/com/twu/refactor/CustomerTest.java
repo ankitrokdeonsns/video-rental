@@ -32,16 +32,16 @@ public class CustomerTest {
        dinsdale.addRental(new Rental (wallace, 6));
    }
     @Test
-    public void testEmpty() throws Exception {
+    public void shouldGenearateStatementFor_CustomerWithNoRentals() throws Exception {
     	dinsdale = new Customer("Dinsdale Pirhana");
         equalsFile("1st Output", "outputEmpty", dinsdale.statement());
     }
     @Test
-    public void testCustomer() throws Exception {
+    public void shouldGenearateStatementFor_CustomerWithRentals() throws Exception {
         equalsFile("1st Output", "output1", dinsdale.statement());
     }
     @Test
-    public void testChange() throws Exception {
+    public void shouldGenearateStatementFor_CustomerWithNoRentals_ForModifiedRentals() throws Exception {
     	la.setPriceCode(Movie.REGULAR);
         equalsFile("1st Output", "outputChange", dinsdale.statement());
     }
