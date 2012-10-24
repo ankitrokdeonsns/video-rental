@@ -68,7 +68,7 @@
       <file leaf-file-name="CustomerTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/refactor/CustomerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="26" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.5675676">
+            <state line="14" column="41" selection-start="311" selection-end="311" vertical-scroll-proportion="0.16216215">
               <folding />
             </state>
           </provider>
@@ -501,7 +501,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24938725" sideWeight="0.82281286" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17718716" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17718716" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -655,7 +655,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/refactor/CustomerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="26" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.5675676">
+        <state line="14" column="41" selection-start="311" selection-end="311" vertical-scroll-proportion="0.16216215">
           <folding />
         </state>
       </provider>

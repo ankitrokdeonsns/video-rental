@@ -5,7 +5,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
 
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,7 +12,7 @@ import static junit.framework.Assert.assertEquals;
 
 public class CustomerTest {
 
-	private static final String GOLD_PATH = "test/data";
+	private static final String TEST_DATA_PATH = "test/data";
 
     private Customer dinsdale = new Customer("Dinsdale Pirhana");
 
@@ -34,16 +33,16 @@ public class CustomerTest {
     @Test
     public void shouldGenearateStatementFor_CustomerWithNoRentals() throws Exception {
     	dinsdale = new Customer("Dinsdale Pirhana");
-        equalsFile("1st Output", "outputEmpty", dinsdale.statement());
+        equalsFile("outputEmpty", dinsdale.statement());
     }
     @Test
     public void shouldGenearateStatementFor_CustomerWithRentals() throws Exception {
-        equalsFile("1st Output", "output1", dinsdale.statement());
+        equalsFile("output1", dinsdale.statement());
     }
     @Test
     public void shouldGenearateStatementFor_CustomerWithNoRentals_ForModifiedRentals() throws Exception {
     	la.setPriceCode(Movie.REGULAR);
-        equalsFile("1st Output", "outputChange", dinsdale.statement());
+        equalsFile("outputChange", dinsdale.statement());
     }
 
     /*
@@ -52,8 +51,8 @@ public class CustomerTest {
     }
     */
     	
-    protected void equalsFile(String message, String fileName, String actualValue) throws IOException{
-        BufferedReader file = new BufferedReader (new FileReader (GOLD_PATH + '/' + fileName));
+    protected void equalsFile(String fileName, String actualValue) throws IOException{
+        BufferedReader file = new BufferedReader (new FileReader (TEST_DATA_PATH + '/' + fileName));
         BufferedReader actualStream = new BufferedReader (new StringReader (actualValue));
         String thisFileLine = null;
         while  ((thisFileLine = file.readLine()) != null) {
