@@ -95,10 +95,8 @@
       <file leaf-file-name="Customer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="786" selection-end="786" vertical-scroll-proportion="0.37430167">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="22" column="8" selection-start="417" selection-end="417" vertical-scroll-proportion="0.5837989">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -653,10 +651,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="786" selection-end="786" vertical-scroll-proportion="0.37430167">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="22" column="8" selection-start="417" selection-end="417" vertical-scroll-proportion="0.5837989">
+          <folding />
         </state>
       </provider>
     </entry>
