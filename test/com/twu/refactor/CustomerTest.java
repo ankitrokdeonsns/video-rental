@@ -6,8 +6,12 @@ import java.io.IOException;
 import java.io.StringReader;
 
 import junit.framework.TestCase;
+import org.junit.Before;
+import org.junit.Test;
 
-public class CustomerTest extends TestCase {
+import static junit.framework.Assert.assertEquals;
+
+public class CustomerTest {
 
 	private static final String GOLD_PATH = "test/data";
 
@@ -19,6 +23,7 @@ public class CustomerTest extends TestCase {
 	private Movie trek = new Movie("Star Trek 13.2", Movie.NEW_RELEASE);
 	private Movie wallace = new Movie("Wallace and Gromit", Movie.CHILDRENS);
 
+    @Before
     public void setUp (){
        dinsdale.addRental(new Rental (python, 3));
        dinsdale.addRental(new Rental (ran, 1));
@@ -26,15 +31,16 @@ public class CustomerTest extends TestCase {
        dinsdale.addRental(new Rental (trek, 1));
        dinsdale.addRental(new Rental (wallace, 6));
    }
-
+    @Test
     public void testEmpty() throws Exception {
     	dinsdale = new Customer("Dinsdale Pirhana");
         equalsFile("1st Output", "outputEmpty", dinsdale.statement());
     }
+    @Test
     public void testCustomer() throws Exception {
         equalsFile("1st Output", "output1", dinsdale.statement());
     }
-
+    @Test
     public void testChange() throws Exception {
     	la.setPriceCode(Movie.REGULAR);
         equalsFile("1st Output", "outputChange", dinsdale.statement());
