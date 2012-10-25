@@ -15,10 +15,6 @@ public class Customer {
         rentalList.add(arg);
     }
 
-    public String getName() {
-        return name;
-    }
-
     public String statement() {
         return header() + body() + footer();
     }
@@ -30,7 +26,7 @@ public class Customer {
     }
 
     private String header() {
-        return "Rental Record for " + getName() + "\n";
+        return "Rental Record for " + name + "\n";
     }
 
     private double calculateTotalAmount() {
