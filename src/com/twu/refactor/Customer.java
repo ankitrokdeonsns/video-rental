@@ -32,7 +32,7 @@ public class Customer {
     private double calculateTotalAmount() {
         double totalAmount = 0;
         for (Rental rental : rentalList) {
-            totalAmount += calculateAmoutFor(rental);
+            totalAmount += rental.amount();
         }
         return totalAmount;
     }
@@ -58,30 +58,7 @@ public class Customer {
 
     private String statementFor(Rental rental) {
         return "\t" + rental.getMovie().getTitle() + "\t"
-                + String.valueOf(calculateAmoutFor(rental)) + "\n";
-    }
-
-    private double calculateAmoutFor(Rental rental) {
-        double thisAmount = 0;
-
-        // determine amounts for each line
-        switch (rental.getMovie().getPriceCode()) {
-            case Movie.REGULAR:
-                thisAmount += 2;
-                if (rental.getDaysRented() > 2)
-                    thisAmount += (rental.getDaysRented() - 2) * 1.5;
-                break;
-            case Movie.NEW_RELEASE:
-                thisAmount += rental.getDaysRented() * 3;
-                break;
-            case Movie.CHILDRENS:
-                thisAmount += 1.5;
-                if (rental.getDaysRented() > 3)
-                    thisAmount += (rental.getDaysRented() - 3) * 1.5;
-                break;
-
-        }
-        return thisAmount;
+                + String.valueOf(rental.amount()) + "\n";
     }
 
 }
