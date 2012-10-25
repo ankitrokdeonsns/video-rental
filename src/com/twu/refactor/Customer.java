@@ -40,10 +40,7 @@ public class Customer {
     private int calculateFrequentRenterPoints() {
         int frequentRenterPoints = 0;
         for (Rental rental : rentalList) {
-            frequentRenterPoints++;
-            if ((rental.getMovie().getPriceCode() == Movie.NEW_RELEASE)
-                    && rental.getDaysRented() > 1)
-                frequentRenterPoints++;
+            frequentRenterPoints += rental.frequentRenterPoints();
         }
         return frequentRenterPoints;
     }
@@ -51,14 +48,9 @@ public class Customer {
     private String body() {
         String result = "";
         for (Rental rental : rentalList) {
-            result += statementFor(rental);
+            result += rental.statement();
         }
         return result;
-    }
-
-    private String statementFor(Rental rental) {
-        return "\t" + rental.getMovie().getTitle() + "\t"
-                + String.valueOf(rental.amount()) + "\n";
     }
 
 }

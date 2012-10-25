@@ -11,34 +11,23 @@ public class Rental {
         this.daysRented = daysRented;
     }
 
-    public int getDaysRented() {
-        return daysRented;
-    }
-
-    public Movie getMovie() {
-        return movie;
-    }
-
     double amount() {
-        double amount = 0;
+        return movie.rentalCharge(daysRented);
+    }
 
-        // determine amounts for each line
-        switch (getMovie().getPriceCode()) {
-            case Movie.REGULAR:
-                amount += 2;
-                if (getDaysRented() > 2)
-                    amount += (getDaysRented() - 2) * 1.5;
-                break;
-            case Movie.NEW_RELEASE:
-                amount += getDaysRented() * 3;
-                break;
-            case Movie.CHILDRENS:
-                amount += 1.5;
-                if (getDaysRented() > 3)
-                    amount += (getDaysRented() - 3) * 1.5;
-                break;
+    public boolean isApplicableForBonusFrequentRenterPoint() {
+        return (movie.getPriceCode() == Movie.NEW_RELEASE)
+                && daysRented > 1;
+    }
 
-        }
-        return amount;
+    public int frequentRenterPoints() {
+        if (this.isApplicableForBonusFrequentRenterPoint())
+            return 2;
+        return 1;
+    }
+
+    String statement() {
+        return "\t" + movie.getTitle() + "\t"
+                + String.valueOf(amount()) + "\n";
     }
 }
